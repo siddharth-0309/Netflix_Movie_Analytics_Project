@@ -11,8 +11,7 @@ st.write("This is a data analysis project showcasing insights from the Netflix m
 # 1. Load the data
 @st.cache_data
 def load_data():
-   
-    df = pd.read_csv('mymoviedb.csv', encoding='latin-1', on_bad_lines='skip')
+    df = pd.read_csv('mymoviedb.csv', sep=';', encoding='utf-8', on_bad_lines='skip')
     return df
 
 try:
